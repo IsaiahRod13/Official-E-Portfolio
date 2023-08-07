@@ -12,6 +12,17 @@ section {
   background-color: rgb(245, 245, 245);
 }
 
+.container{
+  padding: 50px 0;
+}
+
+.row{
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
 button {
   cursor: pointer;
 }
@@ -119,11 +130,16 @@ Landing Page
   background-color: #242424;
   width: 4px;
   height: 6px;
+  border-radius: 2px;
+  animation: scroll 1000ms infinite alternate-reverse;
 }
 
 @keyframes scroll {
   0%{
     transform: translateY(3px);
+  }
+  100%{
+    transform: translateY(-3px);
   }
 }
 
@@ -166,4 +182,39 @@ nav {
 
 .fa-adjust {
   font-size: 20px;
+}
+
+
+
+/* 
+
+Projects
+
+*/
+
+.section__title{
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.project__img{
+  width: 100%;
+}
+
+.project__wrapper{
+  position: relative;
+}
+
+.project__description{
+  position: absolute;
+  top: 50%;
+  left: 90px;
+  transform:translateY(-50%);
+  color: white;
+  max-width: 550px;
+}
+
+.project__wrapper:hover{
+   
 }
