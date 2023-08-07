@@ -8,16 +8,27 @@
   font-family: "Roboto", sans-serif;
 }
 
-section{
+section {
   background-color: rgb(245, 245, 245);
 }
 
-.colored{
+button {
+  cursor: pointer;
+}
+
+.colored {
   color: #4c71e9;
 }
 
-.click:hover{
-transform: scale(1.1);
+.click {
+  transition: all 300ms ease;
+}
+
+.click:hover {
+  transform: scale(1.1);
+}
+.click:active {
+  transform: scale(0.8);
 }
 
 /*
@@ -26,11 +37,11 @@ Landing Page
 
 */
 
-#landing__page{
+#landing__page {
   min-height: 100vh;
 }
 
-.header{
+.header {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -40,7 +51,7 @@ Landing Page
   padding: 0 30px;
 }
 
-.title{
+.title {
   font-style: bold;
   font-size: 120px;
   margin-bottom: 12px;
@@ -48,29 +59,72 @@ Landing Page
   line-height: 1;
 }
 
-.header__para{
+.header__para {
   font-size: 24px;
   line-height: 2;
   max-width: 525px;
 }
 
-.header__icons{
+.header__icons {
   margin-top: 16px;
   display: flex;
 }
 
-.header__icon{
- background-color: #4c71e9;
- padding: 8px;
- width: 32px;
- height: 32px;
- margin: 0 12px 0 0;
- color: white;
- border-radius: 50%;
- font-size: 14px;
- display: flex;
- justify-content: center;
- align-items: center;
+.header__icon {
+  background-color: #4c71e9;
+  color: white;
+  padding: 6px;
+  width: 32px;
+  height: 32px;
+  font-size: 14px;
+  margin: 0 12px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.mail__btn {
+  width: 70px;
+  height: 70px;
+  font-size: 32px;
+  border-radius: 99px;
+  border: none;
+  background-color: #242424;
+  color: white;
+  position: absolute;
+  bottom: 32px;
+  right: 40px;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroll__icon {
+  width: 20px;
+  height: 30px;
+  border: 2px solid #242424;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll__icon:after {
+  content: "";
+  background-color: #242424;
+  width: 4px;
+  height: 6px;
+}
+
+@keyframes scroll {
+  0%{
+    transform: translateY(3px);
+  }
 }
 
 /*
@@ -96,20 +150,20 @@ nav {
   transform: scale(2);
 }
 
-.nav__link--list{
+.nav__link--list {
   display: flex;
 }
 
-.nav__link{
-  margin: 0 12px
+.nav__link {
+  margin: 0 12px;
 }
 
-.nav__link--anchor{
+.nav__link--anchor {
   font-size: 16px;
   color: #242424;
   font-weight: 700;
 }
 
-.fa-adjust{
+.fa-adjust {
   font-size: 20px;
 }
