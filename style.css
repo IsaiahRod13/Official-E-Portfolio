@@ -274,23 +274,48 @@ Projects
  
 */
 
-.footer__container{
+footer{
+  background-color: #242424;
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding: 6% 0;
+  z-index: -5;
+}
+.footer__container{
+  width: 100%;
+}
+
+.footer__row{
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer__img{
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 125px;
+  transform: translateY(15px);
 }
 
 .footer__social--links{
   display: flex;
+  width: 100%;
+  max-width: 500px;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .footer__social--link{
   margin: 0 12px;
+}
+
+.footer__copyright{
+  margin-top: 24px;
+}
+
+.footer__social--link,
+.footer__copyright{
+  color: white;
+  letter-spacing: .5px;
 }
