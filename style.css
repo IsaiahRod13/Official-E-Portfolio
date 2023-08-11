@@ -38,8 +38,29 @@ button {
 .click:hover {
   transform: scale(1.1);
 }
+
 .click:active {
   transform: scale(0.8);
+}
+
+.link__hover--effect{
+  position: relative;
+}
+
+.link__hover--effect:after{
+  content:"";
+  position: absolute;
+  bottom: -3px;
+  height: 3px;
+  width: 0%;
+  right: 0;
+  background-color: black;
+  transition: all 400ms ease;
+}
+
+.link__hover--effect:hover:after{
+  left: 0;
+  width: 100%;
 }
 
 /*
