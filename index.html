@@ -149,18 +149,24 @@
           </h3>
           <form id="contact__form" action="">
             <div class="form__item">
-              <label class="form__item--label" for="name">Name:</label>
-              <input class="input" name="user_name" type="text" required />
+              <label class="form__item--label">Name:</label>
+              <input class="input" name="user_name" type="text" required /></input>
             </div>
             <div class="form__item">
-              <label class="form__item--label" for="name">Email:</label>
-              <input class="input" name="user_name" type="text" required />
+              <label class="form__item--label">Email:</label>
+              <input class="input" name="user_email" type="email" required /></input>
             </div>
             <div class="form__item">
-              <label class="form__item--label" for="name">Message:</label>
-              <input class="input" name="user_name" type="text" required />
+              <label class="form__item--label">Message:</label>
+              <textarea class="input" name="message" type="text" required></textarea>
             </div>
+            <button id="contact__submit" class="form__submit">
+              Send it my way
+            </button>
           </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fas fa-spinner"></i>
+          </div>
         </div>
       </div>
     </section>
@@ -289,7 +295,8 @@
               Github
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/isaiah-brown-rodriguez-123713202"
+              target="_blank"
               class="footer__social--link liver__hover--effect liver__hover--effect--white"
             >
               LinkedIn
