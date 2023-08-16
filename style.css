@@ -68,6 +68,7 @@ button {
 
 .click {
   transition: all 300ms ease;
+  cursor: pointer;
 }
 
 .click:hover {
@@ -361,8 +362,7 @@ MODAL
   color: #4c71e9;
 }
 
-.modal__overlay--loading {
-  background-color: blue;
+.modal__overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -371,21 +371,44 @@ MODAL
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 80px;
-z-index: -1;
+  z-index: -1;
 }
 
-.fa-spinner{
+.modal__overlay--loading {
+  background-color: blue;
+  font-size: 80px;
+  z-index: -1;
+}
+
+.modal__overlay--success {
+  background-color: #4bb543;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  padding: 24px;
+  z-index: -1;
+}
+
+.fa-spinner {
   animation: spinner 800ms infinite linear;
 }
 
 @keyframes spinner {
-  0%{
+  0% {
     transform: rotate(0);
   }
-  100%{
+  100% {
     transform: rotate(360deg);
   }
+}
+
+.modal__exit{
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: white;
+  font-size: 36px;
+  z-index: 100;
 }
 
 /* 
