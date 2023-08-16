@@ -45,10 +45,11 @@
             <a
               href="#"
               class="nav__link--anchor link__hover--effect link__hover--effect--black"
+              onclick="toggleModal()"
               >Contact</a
             >
           </li>
-          <li class="nav__link">
+          <li class="nav__link click" onclick="toggleDark()">
             <a
               href="#"
               class="nav__link--anchor link__hover--effect link__hover--effect--black"
@@ -68,7 +69,7 @@
             dedicated to creating responsive web applications with exceptional
             user experiences. Let's build something extraordinary!
             <br />
-            Heres a bit more <span class="colored">about me.</span>
+            Heres a bit more <b onclick="toggleModal()" class="colored">about me.</b>
           </p>
           <div class="header__icons">
             <a
@@ -89,7 +90,7 @@
           </div>
         </div>
       </header>
-      <button class="mail__btn click">
+      <button class="mail__btn click" onclick="toggleModal()">
         <i class="fas fa-envelope"></i>
       </button>
       <a href="#projects" class="scroll">
@@ -147,7 +148,7 @@
                 src="./assets/icons8-react-160.png"
                 alt=""
               />
-              <span class="language__name">HTML</span>
+              <span class="language__name">React</span>
             </figure>
           </div>
         </div>
@@ -185,7 +186,7 @@
             Thanks for the message! Looking forward to speaking to you soon!
           </div>
         </div>
-        <i class="fas fa-times modal__exit click"></i>
+        <i onclick="toggleModal()" class="fas fa-times modal__exit click" ></i>
       </div>
     </section>
 
