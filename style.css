@@ -12,15 +12,14 @@ section {
   background-color: rgb(245, 245, 245);
 }
 
-b{
+b {
   transition: all 300ms ease;
 }
 
-b:hover{
+b:hover {
   cursor: pointer;
-  opacity: .85;
+  opacity: 0.85;
 }
-
 
 input,
 textarea {
@@ -55,7 +54,6 @@ textarea {
   height: 100px;
   margin-top: 6px;
 }
-
 
 .container {
   padding: 50px 0;
@@ -119,7 +117,7 @@ button {
 
 nav,
 .scroll,
-.header{
+.header {
   opacity: 1;
   visibility: visible;
   transition: all 600ms 600ms;
@@ -127,13 +125,13 @@ nav,
 
 .modal--open nav,
 .modal--open .scroll,
-.modal--open .header{
+.modal--open .header {
   opacity: 0;
   visibility: hidden;
   transition: all 400ms ease;
 }
 
-.dark-theme{
+.dark-theme {
   transition: all 300ms ease;
 }
 
@@ -142,28 +140,28 @@ nav,
 .dark-theme .section__subtitle,
 .dark-theme .nav__link--anchor,
 .dark-theme .fa-adjust,
-.dark-theme .header__para{
+.dark-theme .header__para {
   color: white;
 }
 
-.dark-theme section{
+.dark-theme section {
   background-color: #242424;
 }
 
-.dark-theme .scroll__icon{
+.dark-theme .scroll__icon {
   border-color: white;
 }
 
 .dark-theme .scroll__icon:after,
-.dark-theme .link__hover--effect--black:after{
+.dark-theme .link__hover--effect--black:after {
   background-color: white;
 }
 
-.dark-theme .link__hover--effect--black:after{
+.dark-theme .link__hover--effect--black:after {
   background-color: #242424;
 }
 
-.dark-theme .mail__btn{
+.dark-theme .mail__btn {
   background-color: white;
   color: #242424;
 }
@@ -193,6 +191,7 @@ Landing Page
   margin-bottom: 12px;
   text-align: left;
   line-height: 1;
+  z-index: 5;
 }
 
 .header__para {
@@ -218,6 +217,7 @@ Landing Page
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  z-index: 10;
 }
 
 .mail__btn {
@@ -330,7 +330,7 @@ MODAL
   transition: all 600ms ease;
 }
 
-.modal--open .modal{
+.modal--open .modal {
   z-index: 60;
   box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
   visibility: visible;
@@ -346,7 +346,7 @@ MODAL
 }
 
 .modal--open .modal__about,
-.modal--open .modal__contact{
+.modal--open .modal__contact {
   transform: translate(0%);
 }
 
@@ -402,7 +402,6 @@ MODAL
   flex-direction: column;
   transform: translate(110%);
 }
-
 
 .modal__title {
   font-size: 26px;
@@ -472,7 +471,7 @@ MODAL
   z-index: -1;
 }
 
-.modal__overlay--visible{
+.modal__overlay--visible {
   z-index: 1;
   display: flex;
 }
@@ -490,7 +489,7 @@ MODAL
   }
 }
 
-.modal__exit{
+.modal__exit {
   position: absolute;
   top: 30px;
   right: 40px;
@@ -590,12 +589,12 @@ Projects
 */
 
 footer {
+  position: relative;
   background-color: #242424;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 32px 0 60px 0;
-  z-index: -5;
 }
 .footer__container {
   width: 100%;
@@ -634,4 +633,103 @@ footer {
 .footer__copyright {
   color: white;
   letter-spacing: 0.5px;
+}
+
+/* 
+
+SHAPES
+
+
+*/
+
+.shape{
+  position: fixed;
+}
+
+.shape--0 {
+  top: 15vh;
+  left: 5vw;
+}
+
+.shape--1 {
+  top: 15vh;
+  left: 50vw;
+}
+
+.shape--2 {
+  top: 15vh;
+  left: 80vw;
+}
+
+.shape--3 {
+  top: 50vh;
+  left: 5vw;
+}
+
+.shape--4 {
+  top: 50vh;
+  left: 50vw;
+}
+
+.shape--5 {
+  top: 50vh;
+  left: 80vw;
+}
+
+.shape--6 {
+  top: 80vh;
+  left: 5vw;
+}
+
+.shape--7 {
+  top: 80vh;
+  left: 50vw;
+}
+
+.shape--8 {
+  top: 80vh;
+  left: 80vw;
+}
+
+/* tablets smartphones */
+
+@media (max-width: 768px){
+  .title{
+    font-size: 80px;
+  }
+
+  .header__para{
+    font-size: 20px;
+  }
+
+  .modal{
+    top: 0;
+    left: 0;
+    transform: none;
+    height: auto;
+    width: 100%;
+    flex-direction: column-reverse;
+    border-radius: 0;
+  }
+
+  .modal__half{
+    width: 100%;
+  }
+}
+
+/* Smaller Phones */
+
+@media (max-width: 480px) {
+  .title{
+    font-size: 52px;
+  }
+
+  .header__para{
+    font-size: 18px;
+  }
+
+  .nav__link:first-child{
+    display: none;
+  }
+  
 }
